@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Pfannenstiel F&F - The Big Apple</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/lightbox.css">
+
+  <!-- 
+    - custom font link
+  -->
+  <link rel="stylesheet" href="./assets/font/font.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/loading.png">
+  <link rel="preload" as="image" href="./assets/images/loading-circle.png">
+
+</head>
+
+<body class="active" id="top" oncontextmenu="return false;"></body>
+
+  <!-- 
+    -#PRELOADING
+  -->
+
+  <div class="loading" data-loading>
+    <img src="./assets/images/loading.png" width="55" height="55" alt="loading" class="img">
+    <img src="./assets/images/loading-circle.png" width="70" height="70" alt="" class="circle">
+  </div>
+
+
+  <!-- 
+    HEADER
+   -->
+
+   <header class="header" data-header>
+
+    <div class="container">
+
+       <!-- Desktop Navigation Bar -->
+      <a href="index" class="logo">
+        <img src="./assets/images/logo.png" width="200" alt="">
+      </a>
+
+      <ul class="navbar-list-desktop">
+        <li class="navbar-item">
+          <a href="index#gallery" class="navbar-link" data-nav-link>Gallery</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="index#about" class="navbar-link" data-nav-link>About</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="index#contact" class="navbar-link" data-nav-link>Contact</a>
+        </li>
+
+      </ul>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <img src="./assets/images/menu.svg" width="17" height="17" alt="menu icon">
+      </button>
+
+      <!-- Mobile Navigation Bar -->
+      <nav class="navbar" data-navbar>
+        <div class="container">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="index#gallery" class="navbar-link" data-nav-link>Gallery</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="index#about" class="navbar-link" data-nav-link>About</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="index#contact" class="navbar-link" data-nav-link>Contact</a>
+            </li>
+
+          </ul>
+
+          <!-- Close Button -->
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <span class="span one"></span>
+            <span class="span two"></span>
+          </button>
+      
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <section class="section hero" id="home" aria-label="home">
+        <div class="container">
+          <p class="h1 gallery-title">The Big Apple</p>
+            <p class="gallery-title">
+              Manhatten, Staten Island and Brooklyn
+            </p>
+        </div>
+
+        <img src="./assets/images/hero-shape.svg" width="211" height="189" alt="" class="shape">
+
+      </section>
+        <div class="container">
+          <div class="gallery" id="image"></div>
+        </div>
+        
+        <script>
+          var x ='', i;
+          for (i=1; i<=100; i++) {
+            x = x + '<div class="gallery-card2"> <a href="./assets/images/the-big-apple/the-big-apple' + i + '.jpeg" data-lightbox="the-big-apple-Images" data-title=""> <img src="./assets/images/the-big-apple/the-big-apple' + i + '.jpeg"></a> <div class="btn-icon"> <img src="./assets/images/arrow-forward.svg" width="43" height="20" loading="lazy" alt="arrow-forward icon"> </div> </div>';
+          }
+          document.getElementById("image").innerHTML = x;
+        </script>
+    </article>
+  </main>
+  
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <a href="#" class="scroll-down">
+          <img src="./assets/images/scroll-down.svg" width="40" height="66" loading="lazy" alt="mouse scroll">
+        </a>
+      </div>
+    </section>
+
+    <img src="./assets/images/footer-shape.svg" width="185" height="134" loading="lazy" alt="" class="shape">
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <a href="#" class="logo">
+          <img src="./assets/images/logo_small.png" width="40" height="40" loading="lazy" alt="Richard home">
+        </a>
+
+        <p class="copyright">© Pfannenstiel Form & Funktion</p>
+      </div>
+    </div>
+
+    <div class="footer-bg has-before">
+      <img src="./assets/images/the-big-apple/the-big-apple47.jpeg"  loading="lazy" alt="photography"
+        class="img-cover">
+    </div>
+  </footer>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/lightbox-plus-jquery.js"></script>
+
+</body>
+</html>
+
+
